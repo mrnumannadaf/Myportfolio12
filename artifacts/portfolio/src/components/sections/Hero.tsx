@@ -1,13 +1,15 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTypingEffect } from "@/hooks/use-typing-effect";
+import { useResumePdf } from "@/hooks/use-resume-pdf";
 import numanPhoto from "@assets/image_1777899267067.png";
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const photoRef = useRef<HTMLDivElement>(null);
+  const { downloadPdf, generating } = useResumePdf();
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -117,6 +119,30 @@ export function Hero() {
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Contact Me
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              disabled={generating}
+              onClick={downloadPdf}
+              className="border-secondary/50 text-secondary hover:bg-secondary/10 hover:text-secondary glow-border rounded-none heading-font tracking-widest h-14 px-8 gap-2 disabled:opacity-60"
+              data-testid="button-download-resume"
+            >
+              {generating ? (
+                <>
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                    className="w-4 h-4 border-2 border-secondary/30 border-t-secondary rounded-full"
+                  />
+                  Generating...
+                </>
+              ) : (
+                <>
+                  <Download size={16} />
+                  Resume
+                </>
+              )}
             </Button>
           </motion.div>
           

@@ -17,6 +17,7 @@ import { Ventures } from "@/components/sections/Ventures";
 import { Stats } from "@/components/sections/Stats";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
+import { ResumePdf } from "@/components/ResumePdf";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ function PortfolioPage() {
             <Contact />
           </main>
           <Footer />
+          <ResumePdf />
         </div>
       )}
     </>
