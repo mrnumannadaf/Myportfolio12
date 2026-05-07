@@ -51,6 +51,7 @@ function PortfolioPage() {
           </main>
           <Footer />
           <ResumePdf />
+          <ChatBot />
         </div>
       )}
     </>
