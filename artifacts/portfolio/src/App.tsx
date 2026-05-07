@@ -18,6 +18,7 @@ import { Stats } from "@/components/sections/Stats";
 import { Contact } from "@/components/sections/Contact";
 import { Footer } from "@/components/sections/Footer";
 import { ResumePdf } from "@/components/ResumePdf";
+import { ChatBot } from "@/components/ChatBot";
 
 const queryClient = new QueryClient();
 
