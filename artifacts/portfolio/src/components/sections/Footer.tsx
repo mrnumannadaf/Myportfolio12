@@ -14,7 +14,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
             <div className="heading-font text-2xl font-black tracking-wider mb-1">
-              NUMAN<span className="text-primary">.OS</span>
+              NUMAN<span className="text-primary">.LAB</span>
             </div>
             <p className="text-muted-foreground text-sm font-mono">
               Full Stack Developer | Tech Entrepreneur | Future AI Builder

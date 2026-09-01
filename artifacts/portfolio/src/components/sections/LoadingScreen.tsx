@@ -8,7 +8,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [isFinished, setIsFinished] = useState(false);
 
   const loadingMessages = [
-    "Initializing Numan OS...",
+    "Initializing Numan's studio...",
     "Loading Projects...",
     "Connecting GitHub...",
     "Fetching Skills...",

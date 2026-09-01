@@ -55,7 +55,7 @@ export function Navbar() {
               <span className="heading-font font-bold text-lg text-primary glow-text">N</span>
             </div>
             <span className="heading-font font-bold text-xl tracking-wider hidden sm:block">
-              NUMAN<span className="text-primary">.OS</span>
+              NUMAN<span className="text-primary">.LAB</span>
             </span>
           </div>
 

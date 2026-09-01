@@ -59,7 +59,7 @@ export function Ventures() {
         >
           <div className="w-12 h-1 bg-primary" />
           <h2 className="heading-font text-3xl md:text-4xl font-bold tracking-wider">
-            VENTURES.DB <span className="text-muted-foreground font-normal text-xl">// MY STARTUPS</span>
+            STARTUPS <span className="text-muted-foreground font-normal text-xl">// MY BUILDS</span>
           </h2>
         </motion.div>
 

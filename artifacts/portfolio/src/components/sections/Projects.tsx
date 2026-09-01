@@ -74,7 +74,7 @@ export function Projects() {
         >
           <div className="w-12 h-1 bg-primary" />
           <h2 className="heading-font text-3xl md:text-4xl font-bold tracking-wider">
-            BUILD.LOG <span className="text-muted-foreground font-normal text-xl">// PROJECTS</span>
+            Selected work <span className="text-muted-foreground font-normal text-xl">// PROJECTS</span>
           </h2>
         </motion.div>
 
