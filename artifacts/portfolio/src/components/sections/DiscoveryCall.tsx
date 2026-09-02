@@ -3,7 +3,7 @@ import { CalendarDays, Check, ExternalLink, Video } from "lucide-react";
 import { motion } from "framer-motion";
 
 const bookingLinks = [
-  { label: "Calendly", href: "https://calendly.com/your-handle", icon: CalendarDays },
+  { label: "Calendly", href: "https://calendly.com/nadafnuman144/new-meeting", icon: CalendarDays },
   { label: "Google Calendar", href: "https://calendar.google.com/calendar/u/0/r/eventedit?text=Discovery%20Call", icon: CalendarDays },
   { label: "Google Meet", href: "https://meet.google.com/new", icon: Video },
   { label: "Zoom", href: "https://zoom.us/join", icon: Video },

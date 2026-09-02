@@ -122,7 +122,6 @@ export function ResumePdf() {
           <Section title="Ventures">
             <VentureItem name="OmniFuze" type="AI Automation Agency · Building" />
             <VentureItem name="Influencer Buzz" type="Influencer Marketing Agency" />
-            <VentureItem name="Fashion Flick" type="E-commerce Brand · In Development" />
           </Section>
         </div>
 

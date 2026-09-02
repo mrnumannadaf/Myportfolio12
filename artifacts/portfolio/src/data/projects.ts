@@ -1,6 +1,9 @@
-import mediQuickImage from "@assets/Screenshot_2026-09-02-17-03-33-29_40deb401b9ffe8e1df2f1cc5ba48_1788361029969.jpg";
-import hackathonImage from "@assets/Screenshot_2026-09-02-16-37-45-61_40deb401b9ffe8e1df2f1cc5ba48_1788361030000.jpg";
-import localBuzzImage from "@assets/Screenshot_2026-09-02-17-13-31-94_40deb401b9ffe8e1df2f1cc5ba48_1788361029904.jpg";
+import omniFuzeBanner from "@assets/generated_images/omnifuze-banner.jpg";
+import mediQuickBanner from "@assets/generated_images/mediquickai-banner.jpg";
+import hackathonBanner from "@assets/generated_images/hackathon-connectr-banner.jpg";
+import aiGrowBanner from "@assets/generated_images/ai-grow-automations-banner.jpg";
+import vijayapurBanner from "@assets/generated_images/vijayapur-homeverse-banner.jpg";
+import connectLocallyBanner from "@assets/generated_images/connect-locally-banner.jpg";
 
 export type PortfolioProject = {
   slug: string;
@@ -25,7 +28,8 @@ export const portfolioProjects: PortfolioProject[] = [
     longDescription:
       "OmniFuze is Numan's AI automation agency for startups, clinics, restaurants, cafes, creators, local businesses, e-commerce brands, and growing companies. The vision combines AI agents, lead generation, appointment workflows, CRM automation, WhatsApp, websites, AI voice agents, and operational dashboards.",
     tags: ["AI Automation", "React", "Node.js", "Gemini", "AI Agents"],
-    github: "https://github.com/numan-nadaf",
+    github: "https://github.com/numan-nadaf/omnifuze-ai",
+    image: omniFuzeBanner,
     gradient: "from-primary/25 to-secondary/10",
     accent: "#8B5CF6",
     features: ["AI chatbots and agents", "Lead and appointment automation", "CRM and WhatsApp workflows", "AI-powered business systems"],
@@ -40,7 +44,7 @@ export const portfolioProjects: PortfolioProject[] = [
     tags: ["AI Wellness", "React", "Healthcare UX", "Lovable"],
     github: "https://github.com/numan-nadaf",
     live: "https://mediquickai.lovable.app",
-    image: mediQuickImage,
+    image: mediQuickBanner,
     gradient: "from-cyan-500/20 to-primary/15",
     accent: "#06B6D4",
     features: ["Nearby care discovery", "Doctors and hospitals", "Mental wellness resources", "Student-friendly experience"],
@@ -55,7 +59,7 @@ export const portfolioProjects: PortfolioProject[] = [
     tags: ["Community", "Hackathons", "Team Building", "React", "Lovable"],
     github: "https://github.com/numan-nadaf",
     live: "https://hackathon-connectr.lovable.app",
-    image: hackathonImage,
+    image: hackathonBanner,
     gradient: "from-cyan-500/20 to-blue-500/15",
     accent: "#22D3EE",
     features: ["Hackathon discovery", "Team matching", "Skill-based connections", "Project collaboration"],
@@ -70,6 +74,7 @@ export const portfolioProjects: PortfolioProject[] = [
     tags: ["AI Agency", "Automation", "Business Growth", "React", "Lovable"],
     github: "https://github.com/numan-nadaf",
     live: "https://ai-grow-automations-88.lovable.app",
+    image: aiGrowBanner,
     gradient: "from-primary/25 to-purple-500/10",
     accent: "#A78BFA",
     features: ["AI growth systems", "Workflow automation", "Lead response flows", "Business process improvement"],
@@ -84,6 +89,7 @@ export const portfolioProjects: PortfolioProject[] = [
     tags: ["Real Estate", "3D Experience", "Vijayapura", "React", "Lovable"],
     github: "https://github.com/numan-nadaf",
     live: "https://vijayapur-home-verse.lovable.app",
+    image: vijayapurBanner,
     gradient: "from-secondary/25 to-primary/10",
     accent: "#60A5FA",
     features: ["Property discovery", "Virtual viewing concept", "3D-inspired browsing", "Local Vijayapura focus"],
@@ -98,7 +104,7 @@ export const portfolioProjects: PortfolioProject[] = [
     tags: ["Community", "Social App", "Local Discovery", "React", "Lovable"],
     github: "https://github.com/numan-nadaf",
     live: "https://connect-locally-app.lovable.app",
-    image: localBuzzImage,
+    image: connectLocallyBanner,
     gradient: "from-primary/25 to-pink-500/10",
     accent: "#EC4899",
     features: ["Nearby people and creators", "Local events", "Community discovery", "Mobile-first experience"],

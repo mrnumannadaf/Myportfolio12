@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { TrendingUp, ShoppingBag, ArrowRight, Bot, Github, ExternalLink } from "lucide-react";
+import { TrendingUp, ArrowRight, Bot, Github } from "lucide-react";
 
 const ventures = [
   {
@@ -38,23 +38,6 @@ const ventures = [
     badge: "LIVE",
     badgeColor: "bg-green-500/20 text-green-400 border-green-500/30",
     status: "Active & Growing",
-  },
-  {
-    name: "Fashion Flick",
-    tagline: "E-commerce Fashion Brand",
-    description: "A modern direct-to-consumer fashion brand targeting Gen-Z and millennials. Built on a foundation of trend-forward styles, quality materials, and a bold digital identity. Currently in development phase with launch imminent.",
-    highlights: [
-      "Curated Fashion Collections",
-      "Direct-to-Consumer Model",
-      "Influencer-Driven Marketing",
-      "Tech-Powered Operations",
-    ],
-    icon: ShoppingBag,
-    gradient: "from-secondary via-blue-500 to-cyan-500",
-    glow: "rgba(59, 130, 246, 0.5)",
-    badge: "BUILDING",
-    badgeColor: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
-    status: "In Development",
   },
 ];
 
