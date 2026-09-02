@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 
 const stats = [
-  { value: 5, suffix: "+", label: "Projects Built", sublabel: "From Salesforce to React apps" },
+  { value: 6, suffix: "+", label: "Projects Built", sublabel: "From Salesforce to React apps" },
   { value: 3, suffix: "+", label: "Work Experiences", sublabel: "Across dev and marketing" },
   { value: 1, suffix: "", label: "Startup Running", sublabel: "Influencer Buzz Agency" },
   { value: 100, suffix: "%", label: "Learning Mode", sublabel: "Always evolving" },

@@ -6,8 +6,31 @@ export function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
+    let activeMagnetic: HTMLElement | null = null;
+
+    const resetMagnetic = () => {
+      if (activeMagnetic) {
+        activeMagnetic.style.transform = "";
+        activeMagnetic = null;
+      }
+    };
+
     const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
+
+      if (window.matchMedia("(pointer: coarse)").matches) return;
+      const target = (e.target as HTMLElement | null)?.closest<HTMLElement>("button, a, .magnetic");
+      if (!target) {
+        resetMagnetic();
+        return;
+      }
+
+      if (activeMagnetic && activeMagnetic !== target) resetMagnetic();
+      const bounds = target.getBoundingClientRect();
+      const offsetX = (e.clientX - (bounds.left + bounds.width / 2)) * 0.12;
+      const offsetY = (e.clientY - (bounds.top + bounds.height / 2)) * 0.12;
+      activeMagnetic = target;
+      activeMagnetic.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
     };
 
     const handleMouseOver = (e: MouseEvent) => {
@@ -25,12 +48,23 @@ export function CustomCursor() {
       }
     };
 
+    const handleMouseOut = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement | null)?.closest<HTMLElement>("button, a, .magnetic");
+      const related = e.relatedTarget as Node | null;
+      if (target && !related?.isConnected || (target && related && !target.contains(related))) {
+        resetMagnetic();
+      }
+    };
+
     window.addEventListener("mousemove", updateMousePosition);
     window.addEventListener("mouseover", handleMouseOver);
+    window.addEventListener("mouseout", handleMouseOut);
 
     return () => {
       window.removeEventListener("mousemove", updateMousePosition);
       window.removeEventListener("mouseover", handleMouseOver);
+      window.removeEventListener("mouseout", handleMouseOut);
+      resetMagnetic();
     };
   }, []);
 

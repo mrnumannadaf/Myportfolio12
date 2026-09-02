@@ -8,7 +8,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
   const [isFinished, setIsFinished] = useState(false);
 
   const loadingMessages = [
-    "Initializing Numan's studio...",
+    "Initializing Numan OS...",
     "Loading Projects...",
     "Connecting GitHub...",
     "Fetching Skills...",
@@ -26,8 +26,8 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
       } else {
         clearInterval(interval);
         setTimeout(() => {
+          onComplete();
           setIsFinished(true);
-          setTimeout(onComplete, 800);
         }, 1000);
       }
     }, 600);

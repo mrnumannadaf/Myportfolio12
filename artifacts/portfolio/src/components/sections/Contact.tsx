@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Mail, Phone, Github, Linkedin, MessageCircle, Send } from "lucide-react";
+import { Mail, Phone, Github, Linkedin, MessageCircle, Send, CalendarDays } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
 
@@ -139,6 +139,18 @@ export function Contact() {
                 →
               </motion.span>
             </motion.a>
+
+            <Button
+              type="button"
+              variant="outline"
+              onClick={() => document.getElementById("booking")?.scrollIntoView({ behavior: "smooth" })}
+              className="w-full rounded-xl border-primary/30 bg-primary/5 p-4 h-auto justify-center gap-3 text-primary font-mono text-sm hover:bg-primary/10 hover:text-primary"
+              data-testid="button-book-discovery-call"
+            >
+              <CalendarDays size={18} />
+              Book a Discovery Call
+              <span className="text-primary">→</span>
+            </Button>
           </motion.div>
 
           {/* Contact Form */}
@@ -185,6 +197,19 @@ export function Contact() {
                       className="w-full bg-muted/50 border border-white/10 rounded-lg px-4 py-3 text-foreground text-sm placeholder-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
                       placeholder="your@email.com"
                       data-testid="input-email"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-mono text-muted-foreground mb-2 uppercase tracking-widest">Subject</label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      className="w-full bg-muted/50 border border-white/10 rounded-lg px-4 py-3 text-foreground text-sm placeholder-muted-foreground focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
+                      placeholder="What are we building?"
+                      data-testid="input-subject"
                     />
                   </div>
 
