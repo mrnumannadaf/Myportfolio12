@@ -160,7 +160,7 @@ export function Hero() {
             <a href="https://www.linkedin.com/in/numan-nadaf/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform interactive">
               <Linkedin size={24} />
             </a>
-            <a href="mailto:numan.nedaf06@gmail.com" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform interactive">
+            <a href="mailto:numan.nadaf06@gmail.com" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform interactive">
               <Mail size={24} />
             </a>
           </motion.div>

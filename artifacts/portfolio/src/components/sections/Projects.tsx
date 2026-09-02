@@ -49,6 +49,12 @@ export function Projects() {
               <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl`} />
 
               <div className="relative z-10">
+                {project.image && (
+                  <div className="relative mb-5 -mx-2 -mt-2 aspect-video overflow-hidden rounded-lg border border-primary/20">
+                    <img src={project.image} alt={`${project.title} preview`} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-primary/10" />
+                  </div>
+                )}
                 <div className="flex justify-between items-start mb-4">
                   <div className="w-10 h-10 rounded border border-primary/30 bg-primary/10 flex items-center justify-center">
                     <span className="font-mono text-primary text-xs font-bold">0{index + 1}</span>
@@ -65,17 +71,19 @@ export function Projects() {
                     >
                       <Github size={14} />
                     </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(event) => event.stopPropagation()}
-                      className="w-8 h-8 rounded border border-white/10 bg-white/5 flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary/50 transition-colors"
-                      aria-label={`Live demo for ${project.title}`}
-                      data-testid={`link-live-${project.slug}`}
-                    >
-                      <ExternalLink size={14} />
-                    </a>
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        className="w-8 h-8 rounded border border-white/10 bg-white/5 flex items-center justify-center text-muted-foreground hover:text-secondary hover:border-secondary/50 transition-colors"
+                        aria-label={`Live demo for ${project.title}`}
+                        data-testid={`link-live-${project.slug}`}
+                      >
+                        <ExternalLink size={14} />
+                      </a>
+                    )}
                   </div>
                 </div>
 

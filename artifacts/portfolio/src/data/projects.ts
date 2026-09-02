@@ -1,3 +1,7 @@
+import mediQuickImage from "@assets/Screenshot_2026-09-02-17-03-33-29_40deb401b9ffe8e1df2f1cc5ba48_1788361029969.jpg";
+import hackathonImage from "@assets/Screenshot_2026-09-02-16-37-45-61_40deb401b9ffe8e1df2f1cc5ba48_1788361030000.jpg";
+import localBuzzImage from "@assets/Screenshot_2026-09-02-17-13-31-94_40deb401b9ffe8e1df2f1cc5ba48_1788361029904.jpg";
+
 export type PortfolioProject = {
   slug: string;
   title: string;
@@ -5,7 +9,8 @@ export type PortfolioProject = {
   longDescription: string;
   tags: string[];
   github: string;
-  live: string;
+  live?: string;
+  image?: string;
   gradient: string;
   accent: string;
   features: string[];
@@ -16,85 +21,87 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     slug: "omnifuze",
     title: "OmniFuze",
-    description: "AI automation studio for startups and businesses.",
+    description: "An AI automation agency building intelligent digital systems for modern businesses.",
     longDescription:
-      "OmniFuze helps startups, clinics, restaurants, cafes, creators, local businesses, e-commerce brands, and growing companies automate support, lead generation, appointments, CRM workflows, WhatsApp, websites, AI voice agents, and AI dashboards.",
-    tags: ["React", "TypeScript", "Node.js", "Gemini", "Automation"],
+      "OmniFuze is Numan's AI automation agency for startups, clinics, restaurants, cafes, creators, local businesses, e-commerce brands, and growing companies. The vision combines AI agents, lead generation, appointment workflows, CRM automation, WhatsApp, websites, AI voice agents, and operational dashboards.",
+    tags: ["AI Automation", "React", "Node.js", "Gemini", "AI Agents"],
     github: "https://github.com/numan-nadaf",
-    live: "https://example.com",
     gradient: "from-primary/25 to-secondary/10",
     accent: "#8B5CF6",
-    features: ["AI chatbots and agents", "Lead and appointment automation", "CRM and WhatsApp workflows", "Operational AI dashboards"],
-    architecture: "Web interface → orchestration layer → connected business tools → human approval and analytics.",
+    features: ["AI chatbots and agents", "Lead and appointment automation", "CRM and WhatsApp workflows", "AI-powered business systems"],
+    architecture: "Business need → AI workflow → connected tools → measurable action and human oversight.",
   },
   {
-    slug: "influencer-buzz",
-    title: "Influencer Buzz Platform",
-    description: "A campaign workspace for creator discovery, execution, and ROI.",
+    slug: "mediquickai",
+    title: "MediQuickAI",
+    description: "AI wellness and healthcare discovery experience designed for students.",
     longDescription:
-      "A full-stack platform for managing influencer marketing campaigns with brand tracking, creator discovery, campaign coordination, deliverables, and performance reporting.",
-    tags: ["React", "Node.js", "Express", "MongoDB", "REST APIs"],
+      "MediQuickAI is an AI-powered wellness experience that helps students find nearby care, doctors, hospitals, pharmacies, ambulances, mental health support, and helpful health resources in one simple interface.",
+    tags: ["AI Wellness", "React", "Healthcare UX", "Lovable"],
     github: "https://github.com/numan-nadaf",
-    live: "https://example.com",
-    gradient: "from-primary/20 to-secondary/15",
-    accent: "#A78BFA",
-    features: ["Brand and creator dashboards", "Campaign management", "Deliverable tracking", "ROI analytics"],
-    architecture: "Role-based dashboard → campaign service → creator and deliverable data → analytics reporting.",
-  },
-  {
-    slug: "fashion-flick",
-    title: "Fashion Flick E-commerce",
-    description: "A modern fashion storefront with a smooth path from discovery to checkout.",
-    longDescription:
-      "A complete e-commerce concept with product collections, advanced filtering, cart management, wishlists, authentication, order tracking, and payment integration.",
-    tags: ["React", "Node.js", "PostgreSQL", "Razorpay", "Tailwind"],
-    github: "https://github.com/numan-nadaf",
-    live: "https://example.com",
-    gradient: "from-secondary/20 to-primary/15",
-    accent: "#60A5FA",
-    features: ["Editorial product catalog", "Search and filters", "Cart and wishlist flows", "Payment-ready checkout"],
-    architecture: "Storefront → product and cart APIs → PostgreSQL → payment and order services.",
-  },
-  {
-    slug: "salesforce-crm-automation",
-    title: "Salesforce CRM Automation",
-    description: "Enterprise CRM workflows made clearer, faster, and less manual.",
-    longDescription:
-      "Salesforce development work at Arlig Technologies, connecting Apex triggers, Lightning Web Components, SOQL, and REST callouts into dependable business processes.",
-    tags: ["Salesforce", "Apex", "LWC", "SOQL", "REST APIs"],
-    github: "https://github.com/numan-nadaf",
-    live: "https://example.com",
-    gradient: "from-primary/20 to-purple-500/15",
-    accent: "#7C3AED",
-    features: ["Apex triggers", "Lightning Web Components", "SOQL data workflows", "REST integrations"],
-    architecture: "CRM event → Apex business logic → Lightning UI → connected systems and follow-up automation.",
-  },
-  {
-    slug: "ai-automation-dashboard",
-    title: "AI Automation Dashboard",
-    description: "A command center for schedules, workflows, webhooks, and execution history.",
-    longDescription:
-      "A web-based dashboard to create, schedule, monitor, and understand automation pipelines with visual workflow building and real-time execution feedback.",
-    tags: ["React", "TypeScript", "Node.js", "WebSockets", "Cron"],
-    github: "https://github.com/numan-nadaf",
-    live: "https://example.com",
-    gradient: "from-blue-500/20 to-primary/15",
-    accent: "#2563EB",
-    features: ["Visual workflow builder", "Webhook triggers", "Task scheduling", "Real-time execution logs"],
-    architecture: "Workflow editor → job queue → worker execution → WebSocket events and run history.",
-  },
-  {
-    slug: "social-media-analytics",
-    title: "Social Media Analytics Tool",
-    description: "One clear view of brand mentions, engagement, growth, and campaign performance.",
-    longDescription:
-      "A multi-platform analytics aggregator for tracking brand performance, sentiment, competitor signals, automated reporting, and growth forecasting.",
-    tags: ["React", "Python", "FastAPI", "PostgreSQL", "Chart.js"],
-    github: "https://github.com/numan-nadaf",
-    live: "https://example.com",
+    live: "https://mediquickai.lovable.app",
+    image: mediQuickImage,
     gradient: "from-cyan-500/20 to-primary/15",
     accent: "#06B6D4",
-    features: ["Cross-platform metrics", "Sentiment analysis", "Competitor tracking", "Automated reports"],
-    architecture: "Platform APIs → FastAPI ingestion → PostgreSQL aggregates → visual analytics and reports.",
+    features: ["Nearby care discovery", "Doctors and hospitals", "Mental wellness resources", "Student-friendly experience"],
+    architecture: "Student need → location-aware discovery → wellness resources → clear next action.",
+  },
+  {
+    slug: "hackathon-connectr",
+    title: "Hackathon Connectr",
+    description: "A platform for finding hackathons and building the right team.",
+    longDescription:
+      "Hackathon Connectr connects developers, designers, and innovators with hackathons and teammates around the world. It makes it easier to discover opportunities, find complementary skills, and start building together.",
+    tags: ["Community", "Hackathons", "Team Building", "React", "Lovable"],
+    github: "https://github.com/numan-nadaf",
+    live: "https://hackathon-connectr.lovable.app",
+    image: hackathonImage,
+    gradient: "from-cyan-500/20 to-blue-500/15",
+    accent: "#22D3EE",
+    features: ["Hackathon discovery", "Team matching", "Skill-based connections", "Project collaboration"],
+    architecture: "Opportunity → participant profile → skill match → team formation and build.",
+  },
+  {
+    slug: "ai-grow-automations",
+    title: "AI Grow Automations",
+    description: "An AI automation agency experience for helping businesses grow.",
+    longDescription:
+      "AI Grow Automations presents a focused agency experience for businesses that want to reduce repetitive work, improve response time, and use AI-powered automation to grow their operations.",
+    tags: ["AI Agency", "Automation", "Business Growth", "React", "Lovable"],
+    github: "https://github.com/numan-nadaf",
+    live: "https://ai-grow-automations-88.lovable.app",
+    gradient: "from-primary/25 to-purple-500/10",
+    accent: "#A78BFA",
+    features: ["AI growth systems", "Workflow automation", "Lead response flows", "Business process improvement"],
+    architecture: "Business goal → automation opportunity → AI workflow → growth outcome.",
+  },
+  {
+    slug: "vijayapur-home-verse",
+    title: "Vijayapur HomeVerse",
+    description: "A real estate experience for discovering homes and sites in Vijayapura, Karnataka.",
+    longDescription:
+      "Vijayapur HomeVerse helps people explore properties, sites, and homes in Vijayapura through a more immersive digital experience, including virtual viewing and 3D-inspired ways to find a place that fits.",
+    tags: ["Real Estate", "3D Experience", "Vijayapura", "React", "Lovable"],
+    github: "https://github.com/numan-nadaf",
+    live: "https://vijayapur-home-verse.lovable.app",
+    gradient: "from-secondary/25 to-primary/10",
+    accent: "#60A5FA",
+    features: ["Property discovery", "Virtual viewing concept", "3D-inspired browsing", "Local Vijayapura focus"],
+    architecture: "Search intent → property story → immersive viewing → shortlist and enquiry.",
+  },
+  {
+    slug: "connect-locally",
+    title: "Connect Locally",
+    description: "A local community app for discovering people, creators, events, and nearby experiences.",
+    longDescription:
+      "Connect Locally brings people closer to the places and communities around them. It helps users discover local people, creators, cafes, events, and nearby opportunities through a friendly mobile-first social experience.",
+    tags: ["Community", "Social App", "Local Discovery", "React", "Lovable"],
+    github: "https://github.com/numan-nadaf",
+    live: "https://connect-locally-app.lovable.app",
+    image: localBuzzImage,
+    gradient: "from-primary/25 to-pink-500/10",
+    accent: "#EC4899",
+    features: ["Nearby people and creators", "Local events", "Community discovery", "Mobile-first experience"],
+    architecture: "Local signal → community feed → meaningful connection → shared experience.",
   },
 ];

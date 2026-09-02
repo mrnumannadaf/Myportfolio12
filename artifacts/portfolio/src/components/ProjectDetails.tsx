@@ -8,9 +8,10 @@ import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/sections/Navbar";
 import { portfolioProjects } from "@/data/projects";
 
-function ProjectScreenshot({ accent }: { accent: string }) {
+function ProjectScreenshot({ accent, image }: { accent: string; image?: string }) {
   return (
     <div className="relative h-72 overflow-hidden rounded-xl border border-primary/20 bg-[#080611] shadow-[0_0_35px_rgba(139,92,246,.16)] sm:h-[440px]">
+      {image && <img src={image} alt="Project interface preview" className="absolute inset-0 h-full w-full object-cover opacity-80" />}
       <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(rgba(139,92,246,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,.35) 1px, transparent 1px)", backgroundSize: "34px 34px" }} />
       <div className="absolute inset-x-[8%] top-[12%] overflow-hidden rounded-lg border border-white/10 bg-[#11101c] shadow-2xl">
         <div className="flex h-8 items-center gap-1.5 border-b border-white/10 px-3">
@@ -34,7 +35,7 @@ function ProjectScreenshot({ accent }: { accent: string }) {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-widest text-primary/60">Project preview</div>
+      <div className="absolute bottom-5 left-5 font-mono text-[10px] uppercase tracking-widest text-primary/60">{image ? "Uploaded project preview" : "Project preview"}</div>
     </div>
   );
 }
@@ -64,9 +65,15 @@ export function ProjectDetails() {
                 <h1 className="heading-font text-4xl font-black leading-tight tracking-tight sm:text-6xl md:text-7xl">{project.title}</h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">{project.longDescription}</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a href={project.live} target="_blank" rel="noreferrer" className="flex min-h-12 w-full items-center justify-center gap-2 rounded-none bg-primary px-6 font-mono text-xs uppercase tracking-widest text-white glow-border-intense hover:bg-primary/90 sm:w-auto">
-                    Visit Website <ExternalLink size={15} />
-                  </a>
+                  {project.live ? (
+                    <a href={project.live} target="_blank" rel="noreferrer" className="flex min-h-12 w-full items-center justify-center gap-2 rounded-none bg-primary px-6 font-mono text-xs uppercase tracking-widest text-white glow-border-intense hover:bg-primary/90 sm:w-auto">
+                      Visit Website <ExternalLink size={15} />
+                    </a>
+                  ) : (
+                    <span className="flex min-h-12 w-full items-center justify-center rounded-none border border-primary/30 bg-primary/5 px-6 font-mono text-xs uppercase tracking-widest text-primary/70 sm:w-auto">
+                      Website link coming soon
+                    </span>
+                  )}
                   <a href={project.github} target="_blank" rel="noreferrer" className="flex min-h-12 w-full items-center justify-center gap-2 rounded-none border border-primary/50 px-6 font-mono text-xs uppercase tracking-widest text-primary hover:bg-primary/10 sm:w-auto">
                     GitHub <Github size={15} />
                   </a>
@@ -81,7 +88,7 @@ export function ProjectDetails() {
         </section>
 
         <section className="container mx-auto px-6 pb-24 md:px-12">
-          <ProjectScreenshot accent={project.accent} />
+          <ProjectScreenshot accent={project.accent} image={project.image} />
           <div className="mt-16 grid gap-12 lg:grid-cols-2">
             <div>
               <div className="mb-4 flex items-center gap-4"><div className="h-1 w-12 bg-primary" /><h2 className="heading-font text-2xl font-bold tracking-wider">FEATURES</h2></div>

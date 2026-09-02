@@ -71,12 +71,12 @@ export function ResumePdf() {
               marginBottom: "14px",
             }}
           >
-            Full Stack Developer · Salesforce Developer · Tech Entrepreneur
+            Computer Science Engineering Student · Full Stack Developer · Freelancer
           </div>
           <div style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
             {[
               { label: "Phone", value: "+91 7349212006" },
-              { label: "Email", value: "numan.nedaf06@gmail.com" },
+              { label: "Email", value: "numan.nadaf06@gmail.com" },
               { label: "GitHub", value: "github.com/numan-nadaf" },
               { label: "LinkedIn", value: "linkedin.com/in/numan-nadaf" },
             ].map((c) => (
@@ -113,13 +113,14 @@ export function ResumePdf() {
           <Section title="Education">
             <div>
               <div style={{ fontSize: "13px", fontWeight: 700, color: "#e2e8f0" }}>
-                B.Tech — Computer Science
+                Computer Science Engineering
               </div>
-              <div style={{ fontSize: "11px", color: "#8B5CF6", marginTop: "2px" }}>4th Semester · Ongoing</div>
+              <div style={{ fontSize: "11px", color: "#8B5CF6", marginTop: "2px" }}>Expected 2026 · Ongoing</div>
             </div>
           </Section>
 
           <Section title="Ventures">
+            <VentureItem name="OmniFuze" type="AI Automation Agency · Building" />
             <VentureItem name="Influencer Buzz" type="Influencer Marketing Agency" />
             <VentureItem name="Fashion Flick" type="E-commerce Brand · In Development" />
           </Section>
@@ -130,41 +131,40 @@ export function ResumePdf() {
           <Section title="Work Experience">
             {[
               {
-                title: "Salesforce Developer",
+                title: "Web Development Intern",
                 company: "Arlig Technologies",
-                period: "2023 – 2024",
+                period: "2024",
                 points: [
-                  "Built custom Salesforce CRM solutions and Apex-based automation",
-                  "Designed Lightning Web Components for enterprise workflows",
-                  "Integrated third-party APIs via Salesforce REST callouts",
+                  "Developed and maintained web application modules using React.js and JavaScript",
+                  "Executed functional testing, debugging, and detailed bug documentation",
+                  "Integrated REST APIs into frontend components for dynamic data",
                 ],
               },
               {
-                title: "Frontend Developer",
-                company: "Arlig Technologies",
-                period: "2023 – 2024",
-                points: [
-                  "Developed responsive UIs with React and modern JavaScript",
-                  "Collaborated with backend teams for REST API integration",
-                  "Optimized performance and improved user experience across apps",
-                ],
-              },
-              {
-                title: "Web Developer",
-                company: "Arlig Technologies",
-                period: "2023",
-                points: [
-                  "Built full-stack web applications from requirements to deployment",
-                  "Handled both client-side and server-side development tasks",
-                ],
-              },
-              {
-                title: "Freelance Social Media Marketer",
+                title: "Full Stack Developer & Freelancer",
                 company: "Self-Employed",
-                period: "2022 – Present",
+                period: "Present",
                 points: [
-                  "Managed influencer campaigns and brand growth strategies",
-                  "Generated measurable ROI for multiple clients through data-driven campaigns",
+                  "Build responsive websites, digital products, and AI-powered experiences",
+                  "Work across frontend interfaces, APIs, QA, and practical automation",
+                ],
+              },
+              {
+                title: "AI Output Evaluation Freelancer",
+                company: "Independent",
+                period: "Present",
+                points: [
+                  "Evaluate AI outputs for factual accuracy, coherence, reasoning, and safety",
+                  "Use structured rubrics and prompt analysis for consistent QA",
+                ],
+              },
+              {
+                title: "Social Media Marketing Freelancer",
+                company: "Self-Employed",
+                period: "Present",
+                points: [
+                  "Support brands with social media strategy and creator-led growth",
+                  "Plan content and execute practical digital marketing campaigns",
                 ],
               },
             ].map((exp) => (
@@ -174,10 +174,12 @@ export function ResumePdf() {
 
           <Section title="Key Projects">
             {[
-              { name: "InfluencerBuzz Platform", stack: "React · Node.js · MongoDB · REST APIs" },
-              { name: "Fashion Flick E-commerce", stack: "React · Node.js · PostgreSQL · Stripe" },
-              { name: "Salesforce CRM Automation", stack: "Salesforce · Apex · LWC · SOQL" },
-              { name: "AI Automation Dashboard", stack: "React · TypeScript · WebSockets · Cron" },
+              { name: "OmniFuze", stack: "AI Automation · React · Node.js · Gemini" },
+              { name: "MediQuickAI", stack: "AI Wellness · React · Healthcare UX" },
+              { name: "Hackathon Connectr", stack: "Hackathons · Team Building · React" },
+              { name: "AI Grow Automations", stack: "AI Agency · Automation · React" },
+              { name: "Vijayapur HomeVerse", stack: "Real Estate · 3D Experience · React" },
+              { name: "Connect Locally", stack: "Community · Social App · React" },
             ].map((p) => (
               <div key={p.name} style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px", alignItems: "flex-start" }}>
                 <div style={{ fontSize: "12px", fontWeight: 600, color: "#e2e8f0" }}>{p.name}</div>

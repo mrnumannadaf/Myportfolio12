@@ -1,0 +1,1 @@
+- [PDF inspection tooling](pdf-inspection-tooling.md) — Python package setup can modify workspace config; restore config and remove temporary scaffolding after rendering.

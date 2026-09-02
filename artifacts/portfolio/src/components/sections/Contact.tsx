@@ -30,8 +30,8 @@ export function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "numan.nedaf06@gmail.com",
-      href: "mailto:numan.nedaf06@gmail.com",
+       value: "numan.nadaf06@gmail.com",
+       href: "mailto:numan.nadaf06@gmail.com",
       color: "text-primary",
       glow: "rgba(139, 92, 246, 0.3)",
     },

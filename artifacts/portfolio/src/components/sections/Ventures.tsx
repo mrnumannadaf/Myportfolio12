@@ -1,8 +1,27 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { TrendingUp, ShoppingBag, ArrowRight } from "lucide-react";
+import { TrendingUp, ShoppingBag, ArrowRight, Bot, Github, ExternalLink } from "lucide-react";
 
 const ventures = [
+  {
+    name: "OmniFuze",
+    tagline: "AI Automation Agency",
+    description: "Building AI-powered websites, agents, workflows, and business systems that help startups and local businesses respond faster and grow with less repetitive work.",
+    highlights: [
+      "AI Agents & Chatbots",
+      "Lead and Appointment Automation",
+      "CRM & WhatsApp Workflows",
+      "AI-Powered Business Systems",
+    ],
+    icon: Bot,
+    gradient: "from-primary via-purple-600 to-secondary",
+    glow: "rgba(139, 92, 246, 0.55)",
+    badge: "BUILDING",
+    badgeColor: "bg-primary/20 text-primary border-primary/30",
+    status: "AI Automation Agency",
+    github: "https://github.com/numan-nadaf",
+    href: "/projects/omnifuze",
+  },
   {
     name: "Influencer Buzz",
     tagline: "Influencer Marketing Agency",
@@ -113,9 +132,22 @@ export function Ventures() {
 
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-muted-foreground">{venture.status}</span>
-                    <button className="flex items-center gap-2 text-primary text-sm font-mono hover:gap-3 transition-all group/btn">
-                      Learn More <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
-                    </button>
+                     <div className="flex items-center gap-3">
+                       {venture.github && (
+                         <a href={venture.github} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 text-muted-foreground text-xs font-mono hover:text-primary transition-colors" onClick={(event) => event.stopPropagation()}>
+                           <Github size={13} /> GitHub
+                         </a>
+                       )}
+                       {venture.href ? (
+                         <a href={venture.href} className="flex items-center gap-2 text-primary text-sm font-mono hover:gap-3 transition-all group/btn">
+                           Learn More <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                         </a>
+                       ) : (
+                         <button className="flex items-center gap-2 text-primary text-sm font-mono hover:gap-3 transition-all group/btn">
+                           Learn More <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
+                         </button>
+                       )}
+                     </div>
                   </div>
                 </div>
               </motion.div>

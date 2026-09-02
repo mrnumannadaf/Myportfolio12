@@ -45,13 +45,13 @@ export function About() {
               </div>
               
               <p className="text-lg md:text-xl text-foreground leading-relaxed">
-                "I'm a Computer Science Engineering student passionate about building real-world digital solutions. I have worked as a Salesforce Developer at Arlig Technologies, where I gained experience in CRM systems and business automation. I also have experience as a Frontend and Web Developer, and I actively work in Social Media Marketing, helping brands grow through influencer strategies. My goal is to combine technology, business, and AI to build scalable digital products and startups."
+                "I'm a Computer Science Engineering student and freelancer passionate about building real-world digital solutions. I have experience in React.js, JavaScript, Python, REST API integration, software testing, debugging, QA documentation, and AI output evaluation. I build useful digital products and help businesses grow through technology, automation, and thoughtful online experiences."
               </p>
               
               <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap gap-8">
                 <div>
                   <h4 className="text-primary text-sm mb-1 uppercase tracking-widest">Education</h4>
-                  <p className="text-foreground font-sans">4th Semester CSE Student</p>
+                  <p className="text-foreground font-sans">Computer Science Engineering Student</p>
                 </div>
                 <div>
                   <h4 className="text-secondary text-sm mb-1 uppercase tracking-widest">Focus</h4>
